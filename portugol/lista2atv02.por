@@ -4,26 +4,36 @@ programa
 	funcao inicio()
 	{
 	//variaveis
-		inteiro codigo, horas, precoHora, salario, salarioExtra
+		const real VALORHORANORMAL=10.00
+		const real VALORHORAEXTRA=20.00
+		const inteiro HORASNORMAIS=50
+		
+		cadeia codigo
+		inteiro horasTrabalhadas=0
+		inteiro E=0
+		real salario=0.00
+		real salarioTotal=0.00
+		real salarioExtra=0.00
 	//entradas
 		escreva("Digite o código do funcionário: ")
 		leia(codigo)
 		escreva("Digite o numero de horas trabalhadas: ")
-		leia(horas)
-		precoHora = 10 
-		salarioExtra = 0
+		leia(horasTrabalhadas)
 	//processamento
-		se (horas>50) {
-			salario = 50 * precoHora
-			salarioExtra = (horas-50) * (precoHora*2)	
+		se (horasTrabalhadas>HORASNORMAIS) {
+			E = horasTrabalhadas - HORASNORMAIS
+			salario = HORASNORMAIS * VALORHORANORMAL
+			salarioExtra = E * VALORHORAEXTRA
+			salarioTotal = salario + salarioExtra
 		}
 		senao {
-			salario = horas * precoHora
+			salario = horasTrabalhadas * VALORHORANORMAL
+			salarioTotal = salario + salarioExtra
 		}
 	//saidas
-		escreva("O funcionário de código ",codigo, " trabalhou ", horas, " horas\n") 
-		escreva("Salário: R$ ", salario, "\n")
-		escreva("Extra: R$ ", salarioExtra)
+		escreva("\nSalário       R$ : ", salario)
+		escreva("\nSalário extra R$ : ", salarioExtra)
+		escreva("\nSalário Total R$ : ", salarioTotal)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -31,7 +41,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 260; 
+ * @POSICAO-CURSOR = 752; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
