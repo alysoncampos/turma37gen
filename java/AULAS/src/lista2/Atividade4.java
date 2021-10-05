@@ -10,9 +10,9 @@ public class Atividade4 {
 		double numero;
 		
 		System.out.printf("Digite um valor inteiro positivo: ");
-		numero = scan.nextInt();
+		numero = scan.nextDouble();
 		
-		if (numero< 0) {
+		if (numero<0) {
 			System.out.printf("\nImpossível...número negativo.");
 		}
 		else if (numero==0) {
