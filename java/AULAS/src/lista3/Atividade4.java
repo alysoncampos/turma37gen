@@ -8,51 +8,50 @@ public class Atividade4 {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		int idade=0, sexo=0, temperamento=0, x=0;
-		int pessoaCalma=0, mulherNervosa=0, homemAgressivo=0, outrosCalmos=0, nervosoMaiorQuarenta=0, calmoMenorDezoito=0;
+		int idade;
+		char sexo; //(1-feminino / 2-masculino / 3-Outros)
+		char opcao; //(1, pessoa calma; 2, pessoa nervosa; e 3, pessoa agressiva)
+		int pessoasCalmas=0, mulheresNervosas=0, homensAgressivos=0, outrosCalmos=0, nervosasAcimaQuarenta=0, calmasMenorDezoito=0;
+		char op='S'; 
+		int contadorHabitantes=1;
 		
-		System.out.printf("Digite sua idade: ");
-		idade = scan.nextInt();
-		System.out.printf("Digite seu sexo (1-Feminino | 2-Masculino | 3-Outros): ");
-		sexo = scan.nextInt();
-		System.out.printf("Digite seu temperamento (1-Calmo(a) | 2-Nervoso(a) | 3-Agressivo): ");
-		temperamento = scan.nextInt();
-		
-		while (x<=150){
-			if (temperamento==1){
-				pessoaCalma++;
+		while(op == 'S' && contadorHabitantes<=150){
+			System.out.printf("Habitante numero: %d",contadorHabitantes);
+			System.out.printf("\nDigite a idade: ");
+			idade = scan.nextInt();
+			System.out.printf("\nEscolha\n1-Feminino\n2-Masculino\n3-Outros: ");
+			sexo = scan.next().charAt(0);
+			System.out.printf("\nEscolha\n1-Calmo(a)\n2-Nervoso(a)\n3-Agressivo: ");
+			opcao = scan.next().charAt(0);
+			System.out.printf("\nContinua S/N: ");
+			op = scan.next().toUpperCase().charAt(0);
+			contadorHabitantes++;
+			if (opcao=='1'){
+				pessoasCalmas++;
 			} 
-			if (sexo==1 && temperamento==2) {
-				mulherNervosa++;
+			if (sexo=='1' && opcao=='2') {
+				mulheresNervosas++;
 			}
-			if (sexo==2 && temperamento==3) {
-				homemAgressivo++;
+			if (sexo=='2' && opcao=='3') {
+				homensAgressivos++;
 			}
-			if (sexo==3 && temperamento==1) {
+			if (sexo=='3' && opcao=='1') {
 				outrosCalmos++;
 			}
-			if (idade>40 && temperamento==2) {
-				nervosoMaiorQuarenta++;
+			if (idade>=40 && opcao=='2') {
+				nervosasAcimaQuarenta++;
 			}
-			if (idade<18 && temperamento==1) {
-				calmoMenorDezoito++;
+			if (idade<18 && opcao=='1') {
+				calmasMenorDezoito++;
 			}
 			
-			System.out.printf("Digite sua idade: ");
-			idade = scan.nextInt();
-			System.out.printf("Digite seu sexo (1-Feminino | 2-Masculino | 3-Outros): ");
-			sexo = scan.nextInt();
-			System.out.printf("Digite seu temperamento (1-Calmo(a) | 2-Nervoso(a) | 3-Agressivo): ");
-			temperamento = scan.nextInt();
-			x++;	
-		}
-		
-		System.out.printf("PESSOAS CALMAS: %d.",pessoaCalma);
-		System.out.printf("MULHERES NERVOSAS: %d.",mulherNervosa);
-		System.out.printf("HOMENS AGRESSIVOS: %d.",homemAgressivo);
-		System.out.printf("OUTROS CALMOS: %d.",outrosCalmos);
-		System.out.printf("NERVOSOS MAIOR DE 40 ANOS: %d.",nervosoMaiorQuarenta);
-		System.out.printf("CALMOS MENOR DE 18 ANOS: %d.",calmoMenorDezoito);
-		
+		} 
+		System.out.printf("\nHabitantes entrevistados:    %d",(contadorHabitantes-1));
+		System.out.printf("\nPessoas calmas:              %d",pessoasCalmas);
+		System.out.printf("\nMulheres nervosas:           %d",mulheresNervosas);
+		System.out.printf("\nHomens agressivos:           %d",homensAgressivos);
+		System.out.printf("\noutros calmos:               %d",outrosCalmos);
+		System.out.printf("\nNervosos maiores de 40 anos: %d",nervosasAcimaQuarenta);
+		System.out.printf("\nCalmos menores de 18 anos:   %d",calmasMenorDezoito);
 	}
 }

@@ -10,23 +10,21 @@ public class Atividade6 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		int numero=0;
-		double media=0.00,soma=0.00, totalMultiplos=0.00;
+		int numero=0, cont=0;
+		double soma=0.00;
 		
+		System.out.println("Para sair do programa digite 0");
 		do {
 			System.out.printf("Digite um número: ");
 			numero = scan.nextInt();
-			if (numero%3==0) {
+			if (numero%3==0 && numero>0) {
 				soma+=numero;
-				totalMultiplos++;
+				cont++;
 			}
 			
 		} while(numero!=0);
 		
-		media=soma/totalMultiplos;
-		System.out.printf("A soma dos múltiplos de 3 é %.2f.",soma);
-		System.out.printf("\nVocê digitou %.2f numeros múltiplos de 3.",totalMultiplos);
-		System.out.printf("\nA média entre eles é %.2f.",media);
+		System.out.printf("\nA média entre eles é %.2f.",(soma/cont));
 	}
 
 }
