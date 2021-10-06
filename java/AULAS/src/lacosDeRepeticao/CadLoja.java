@@ -36,7 +36,6 @@ public class CadLoja {
 			} else {
 				teste++;
 			}
-			
 		}
 		if (teste==nomeProduto.length){
 			System.out.printf("\nProduto não encontrado.");
