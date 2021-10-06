@@ -38,6 +38,7 @@ public class CadAuxilio {
 		System.out.print("Quantidade de filhos: ");
 		filhos = scan.nextInt();
 		
+		
 		if(chefaFamilia && naoOutroAuxilio) {
 			System.out.printf("Olá Sr%c vai receber de auxilio %.2f, mais R$ %.2f do(s) filhos(S) gerando um total de R$ %.2f.",pronome,(AUXILIO*2),(PORFILHO*filhos), (AUXILIO*2+(PORFILHO*filhos)));
 		}
@@ -48,5 +49,7 @@ public class CadAuxilio {
 			System.out.println("Você não tem direito ao benefício!!");
 		}
 	
-	}	
+	}
+	
+
 }
