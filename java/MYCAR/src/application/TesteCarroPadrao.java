@@ -1,0 +1,41 @@
+package application;
+
+import entities.Carro;
+
+public class TesteCarroPadrao {
+
+	public static void main(String[] args) {
+		
+		Carro carro1 = new Carro("PLX-0301", "CELTA", "GM");
+		Carro carro2 = new Carro();
+		
+		carro1.ligarCarro();
+		carro1.andarCarro();
+		System.out.println(carro1.getMarcha()+" "+carro1.getVelocidade());
+		carro1.subirMarcha();
+		carro1.acelerar();
+		carro1.acelerar();
+		carro1.acelerar();
+		carro1.acelerar();
+		System.out.println(carro1.getMarcha()+" "+carro1.getVelocidade());
+		carro1.subirMarcha();
+		for(int x=1; x<10;x++) {
+			carro1.acelerar();
+		}
+		System.out.println(carro1.getMarcha()+" "+carro1.getVelocidade());
+		for(int x=1; x<5;x++) {
+			carro1.reduzir();
+		}
+		System.out.println(carro1.getMarcha()+" "+carro1.getVelocidade());
+		carro1.freio();
+		carro1.freio();
+		carro1.freio();
+		System.out.println(carro1.getMarcha()+" "+carro1.getVelocidade());
+		carro1.descerMarcha();
+		carro1.descerMarcha();
+		carro1.descerMarcha();
+		carro1.pararCarro();
+		System.out.println(carro1.getMarcha()+" "+carro1.getVelocidade());
+	}
+
+}
