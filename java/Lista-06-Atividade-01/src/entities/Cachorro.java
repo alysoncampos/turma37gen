@@ -6,6 +6,10 @@ public class Cachorro extends Animal {
 		super(nome, idade);
 	}
 	
+	public void abanandoRabo() {
+		System.out.println("Abanando o rabo...");
+	}
+	
 	@Override
 	public void emitirSom() {
 		System.out.println("Emitindo som: au au au...");

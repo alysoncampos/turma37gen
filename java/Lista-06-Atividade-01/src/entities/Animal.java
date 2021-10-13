@@ -1,6 +1,7 @@
 package entities;
 
 public class Animal {
+	
 	private String nome;
 	private int idade;
 	
@@ -8,7 +9,7 @@ public class Animal {
 		super();
 		this.nome = nome;
 		this.idade = idade;
-		
+
 	}
 	
 	public String getNome() {

@@ -6,4 +6,8 @@ public class Cavalo extends Animal{
 		super(nome, idade);
 	}
 	
+	@Override
+	public void emitirSom() {
+		System.out.println("Emitindo som...IRCCC IRCC IRCC");
+	}
 }
