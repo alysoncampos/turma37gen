@@ -55,4 +55,4 @@ SELECT * FROM tb_produtos
 -- Faça um select onde traga todos os Produtos de uma categoria específica (exemplo todos os produtos que são cosméticos).
 SELECT * FROM tb_produtos
 	INNER JOIN tb_categorias ON tb_categorias.id = tb_produtos.fk_categoria_id 
-WHERE id = 4;
+WHERE tb_categorias.tipo = "Perfumaria";

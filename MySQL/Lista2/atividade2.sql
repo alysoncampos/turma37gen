@@ -54,5 +54,4 @@ SELECT * FROM tb_pizza
 -- Faça um select onde traga todos os Produtos de uma categoria específica (exemplo todos os produtos que são pizza doce).
 SELECT * FROM tb_pizza
 	INNER JOIN tb_categoria ON tb_categoria.id = tb_pizza.fk_categoria_id 
-WHERE id = 4;
-
+WHERE tb_categoria.tipo = "Doce"

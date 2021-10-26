@@ -54,7 +54,7 @@ SELECT * FROM tb_personagens
 -- Faça um select onde traga todos os personagem de uma classe específica (exemplo todos os personagens que são arqueiros).
 SELECT * FROM tb_personagens
 	INNER JOIN tb_classes ON tb_classes.id_classe = tb_personagens.fk_classe_id
-WHERE id_classe = 3 ;
+WHERE tb_classes.tipo = "Guerreiro" ;
 
 
 
